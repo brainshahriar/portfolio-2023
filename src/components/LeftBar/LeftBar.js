@@ -45,37 +45,7 @@ const LeftBar = () => {
                 <hr  className="left-bar__line" />
             </section>
             <section className="left-bar__info-section">
-                {/* <div>
-                    <img
-                        className="left-bar__profile-img"
-                        src={Profile}
-                        alt=""
-                    />
-                    <div className="left-bar__active-dot"></div>
-                </div>
-                <p className="left-bar__name">Rayan Adlardard</p>
-                <p className="left-bar__title">Front-end Developer</p>
-                <div className="left-bar__social">
-                        <a href="">
-                            <BsFacebook />
-                        </a>
-                        <a href="">
-                            <BsInstagram />
-                        </a>
-                        <a href="">
-                            <BsTwitter />
-                        </a>
-                        <a href="">
-                            <BsLinkedin />
-                        </a>
-                        <a href="">
-                            <BsYoutube />
-                        </a>
-                        <a href="">
-                            <FaGlobe />
-                        </a>
-                    </div>
-                <hr  className="left-bar__line" /> */}
+                    
             </section>
         </div>
     );
