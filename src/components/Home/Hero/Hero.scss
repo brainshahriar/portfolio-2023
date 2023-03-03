@@ -1,14 +1,25 @@
-@import "../../assets/styles/index.scss";
-.home-content {
-    width: 100%;
-    &__hero-section {
-        height: 467px;
-        background: url('../../assets/images/profile-bg.jpg')no-repeat;
-        padding-bottom: 0px;
-        position: relative;
-        object-fit: cover;
-        background-size: 100% 100%;
-    }
+@import "../../../assets/styles/index.scss";
+.hero-section {
+    height: 467px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-image: linear-gradient(
+            to left,
+            rgba(26, 24, 24, 0) 0%,
+            rgba(24, 22, 26, 0.952) 100%
+        ),
+        url("../../../assets/images/profile-bg.jpg");
+
+    position: relative;
+    object-fit: cover;
+    background-size: 100% 100%;
+    box-shadow: 
+    0px 1px 2px 0px rgba(255, 136, 0, 0.7),
+    0px 1px 2px 0px rgba(255, 153, 0, 0.7),
+    0px 1px 2px 0px rgba(255, 174, 0, 0.7),
+    0px 1px 10px 0px rgba(255, 196, 0, 0.7); 
+
     &__profile-img {
         width: 325.72px;
         height: 90%;
@@ -28,8 +39,7 @@
         font-size: 48px;
         line-height: 123.6%;
         color: #ffffff;
-        // margin-top: 93px;
-        &--hilight {
+        &--highlight {
             color: #ffb400;
         }
     }
@@ -61,11 +71,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #18191A;
-        &__icon{
+        color: #18191a;
+        &__icon {
             font-size: 18px;
             margin-left: 11.67px;
-            color: #18191A;
+            color: #18191a;
         }
     }
 }
+
