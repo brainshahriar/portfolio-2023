@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./RightBar.scss";
 import { GiMoon } from "react-icons/gi";
+import { BiLogIn } from "react-icons/bi";
 import { sidebarLinks } from "./data/sidebarLink";
 
 const RightBar = () => {
@@ -9,6 +10,9 @@ const RightBar = () => {
         <div className="right-bar">
             <div className="right-bar__moon-icon">
                 <GiMoon />
+            </div>
+            <div className="right-bar__login-icon" title="login">
+                <BiLogIn />
             </div>
             <div className="right-bar__link-div">
                 {sidebarLinks().map((data, i) => (

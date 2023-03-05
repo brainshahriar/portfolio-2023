@@ -12,8 +12,16 @@
         transform: rotate(210deg);
         margin-top: 42px;
     }
+    &__login-icon {
+        font-size: 25px;
+        color: #ffffff;
+        margin-top: 40px;
+        margin-right: 10px;
+        cursor: pointer;
+        
+    }
     &__link-div {
-        margin-top: 215px;
+        margin-top: 175px;
         display: flex;
         align-items: center;
         flex-direction: column;
