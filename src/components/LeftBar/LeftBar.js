@@ -16,8 +16,8 @@ const LeftBar = () => {
           <img className="left-bar__profile-img" src={Profile} alt="" />
           <div className="left-bar__active-dot"></div>
         </div>
-        <p className="left-bar__name">Rayan Adlardard</p>
-        <p className="left-bar__title">Front-end Developer</p>
+        <p className="left-bar__name">Al Shahriar Mehedi</p>
+        <p className="left-bar__title">Software Engineer</p>
         <div className="left-bar__social">
           {socialLinksData().map((data, i) => (
             <a href={data.link}>{data.icon}</a>
