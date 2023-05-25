@@ -1,0 +1,51 @@
+@import "../../assets/styles/index.scss";
+
+.body {
+  height: 201px;
+  width: 100%;
+  border: 1px solid green;
+  &__header-top {
+    border: 1px solid yellow;
+    background: #f5f5f5;
+    height: 42px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &__left {
+      font-family: $font-family-hanken;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 14px;
+      color: #666666;
+      margin-right: 120px;
+    }
+    &__ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0; 
+      font-family: $font-family-hanken;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #666666;
+      margin-left: 120px;
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+      }
+    }
+    &__vl {
+      width: 18px;
+      height: 0px;
+      border: 1px solid #d9d9d9;
+      transform: rotate(90deg);
+    }
+  }
+}

@@ -11,24 +11,5 @@ p {
 .body{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    gap:70px;
-    background: #18191A;
-    &__main{
-        display: flex;  
-    }
-    &__left{
-       width: 305px;
-    }
-    &__content{
-        // width: 100%;
-        // border: 1px solid yellow;
-        margin-left: 30px;
-        margin-right: 27px;
-    }
-    &__right{
-        width: 108px;
-    }
+    border: 1px solid blue;
 }
