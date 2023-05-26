@@ -3,5 +3,7 @@
 .body {
   height: 201px;
   width: 100%;
-  border: 1px solid green;
+  &__vl{
+    border: 1px solid #EDEDED;
+  }
 }

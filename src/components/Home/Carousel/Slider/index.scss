@@ -1,0 +1,15 @@
+@import "../../../../assets/styles/index.scss";
+
+.slider-body{
+    height: 100%;
+    position: relative;
+    border: 1px solid green;
+    &__img{
+        width: 100%;
+        height: 100%;
+        border:1px solid tomato;
+    }
+    &__arrow{
+        cursor: pointer;
+    }
+}

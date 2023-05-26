@@ -1,1 +1,41 @@
 @import "../../../assets/styles/index.scss";
+
+.header-bottom {
+    height: 67px;
+    margin-right: 120px;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background: none;
+        outline: none;
+        height: 36px;
+        background: #f3f9fb;
+        border-radius: 18px;
+        font-family: $font-family-hanken;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        color: #222222;
+        padding: 12px;
+        cursor: pointer;
+        &::after{
+            content: url('../../../assets/images/header/Arrow-down.png');
+            margin-top: 7px;
+            margin-left: 6px;
+        }
+        &:hover{
+            color: white;
+            background: #008ecc;
+            &::after{
+                content: url('../../../assets/images/header/Arrow-white.png');
+            }
+        }
+    }
+}
