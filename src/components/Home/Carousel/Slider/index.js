@@ -23,13 +23,14 @@ const Slider = ({ slider }) => {
             <span className="slider-body__arrow" onClick={gotoNext}>
                 <img src={RightArrow} alt="1" />
             </span>
-            {
-                slider.map((data, index) => (
-                    <div className="slider-body__img">
-                    <img src={data?.url} alt="1"/>
+            {/* {slider.map((data, index) => (
+                <div className="slider-body__img">
+                    <img src={data?.url} alt="1" />
                 </div>
-                ))
-            }
+            ))} */}
+            <div className="slider-body__img">
+                <img src={slider[currentIndex].url} alt="1" />
+            </div>
         </div>
     );
 };
