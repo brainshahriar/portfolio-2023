@@ -32,7 +32,7 @@ const HeroTop= () => {
                         Et, volutpat feugiat placerat lobortis. Natoque rutrum
                         semper sed suspendisse nunc lectus.
                     </p>
-                    <button className="hero-section__hire-btn" onClick={handleEventChange('clicked')}>
+                    <button className="hero-section__hire-btn" onClick={handleEventChange('Clicked')}>
                         HIRE ME
                         <span className="hero-section__hire-btn__icon">
                             <AiOutlineArrowRight />
