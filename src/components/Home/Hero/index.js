@@ -5,26 +5,6 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 import Typewriter from "typewriter-effect";
 import { AnalyticsEvent } from "../../../utils.js/gaEvent";
 
-import Hotjar from "@hotjar/browser";
-
-const siteId = 3513762;
-const hotjarVersion = 6;
-
-Hotjar.init(siteId, hotjarVersion);
-
-// Initializing with `debug` option:
-Hotjar.init(siteId, hotjarVersion, {
-  debug: true,
-});
-
-const userId = "abc_123";
-const firstName = "shahriar";
-const favoriteColor = "blue";
-
-Hotjar.identify(userId, {
-  first_name: firstName,
-  color: favoriteColor,
-});
 
 const HeroTop = () => {
   const handleEventChange = (tech) => {
