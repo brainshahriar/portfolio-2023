@@ -3,9 +3,15 @@ import "./Hero.scss";
 import profileImg from "../../../assets/images/profile.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Typewriter from "typewriter-effect";
+import { AnalyticsEvent } from "../../../utils.js/gaEvent";
 
 
 const HeroTop= () => {
+
+    const handleEventChange = (tech) => {
+        AnalyticsEvent('button_name', 'Hire_me', tech);
+    }
+
     return (
         <div className="hero-section">
                 <div className="hero-section__profile-info">
@@ -26,8 +32,8 @@ const HeroTop= () => {
                         Et, volutpat feugiat placerat lobortis. Natoque rutrum
                         semper sed suspendisse nunc lectus.
                     </p>
-                    <button className="hero-section__hire-btn">
-                        HIRE ME{" "}
+                    <button className="hero-section__hire-btn" onClick={handleEventChange('clicked')}>
+                        HIRE ME
                         <span className="hero-section__hire-btn__icon">
                             <AiOutlineArrowRight />
                         </span>
