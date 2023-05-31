@@ -3,12 +3,18 @@ import "./Hero.scss";
 import profileImg from "../../../assets/images/profile.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Typewriter from "typewriter-effect";
-import { AnalyticsEvent } from "../../../utils.js/gaEvent";
+import ReactGA from 'react-ga';
 
 
 const HeroTop = () => {
-  const handleEventChange = (tech) => {
-    AnalyticsEvent("On Click", tech, 'Test Label');
+  const handleButtonClick = () => {
+    const randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 100
+    const eventLabel = `Button Label (${randomNumber})`;
+    ReactGA.event({
+      category: 'Button',
+      action: 'Click',
+      label: eventLabel,
+    });
   };
 
   return (
@@ -33,7 +39,7 @@ const HeroTop = () => {
         </p>
         <button
           className="hero-section__hire-btn"
-          onClick={handleEventChange("Hire Me")}
+          onClick={handleButtonClick("Hire Me")}
         >
           Hire Me
           <span className="hero-section__hire-btn__icon">
@@ -42,7 +48,7 @@ const HeroTop = () => {
         </button>
         <button
           className="hero-section__hire-btn"
-          onClick={handleEventChange("Check CV")}
+          onClick={handleButtonClick("Check CV")}
         >
           Check CV
           <span className="hero-section__hire-btn__icon">

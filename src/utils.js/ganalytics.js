@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import ReactGA from "react-ga4";
+import ReactGA from "react-ga";
 
 const trackingId = "UA-270270633-2";
 
