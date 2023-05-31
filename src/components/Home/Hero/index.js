@@ -7,6 +7,7 @@ import ReactGA from 'react-ga';
 
 
 const HeroTop = () => {
+  
   const handleButtonClick = () => {
     const randomNumber = Math.floor(Math.random() * 100); // Generate a random number between 0 and 100
     const eventLabel = `Button Label (${randomNumber})`;
@@ -42,15 +43,6 @@ const HeroTop = () => {
           onClick={handleButtonClick}
         >
           Hire Me
-          <span className="hero-section__hire-btn__icon">
-            <AiOutlineArrowRight />
-          </span>
-        </button>
-        <button
-          className="hero-section__hire-btn"
-          onClick={handleButtonClick("Check CV")}
-        >
-          Check CV
           <span className="hero-section__hire-btn__icon">
             <AiOutlineArrowRight />
           </span>
