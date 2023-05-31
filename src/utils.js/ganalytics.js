@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 
-const trackingId = "UA-215732774-1";
+const trackingId = "G-Q0SGFY26W8";
 
 const GoogleAnalytics = () => {
     const pageTitle = "landing page";

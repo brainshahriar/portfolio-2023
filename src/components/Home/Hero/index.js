@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./Hero.scss";
 import profileImg from "../../../assets/images/profile.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -8,20 +8,7 @@ import { AnalyticsEvent } from "../../../utils.js/gaEvent";
 
 const HeroTop = () => {
   const handleEventChange = (tech) => {
-    AnalyticsEvent("button_name", "Hire_me", tech);
-  };
-
-  useEffect(() => {
-    // Initialize Hotjar
-    if (typeof window.hj !== 'undefined') {
-      window.hj('trigger', 'my_button_click');
-    }
-  }, []);
-
-  const handleButtonClick = () => {
-    if (typeof window.hj !== 'undefined') {
-      window.hj('trigger', 'my_button_click');
-    }
+    AnalyticsEvent("On Click", tech, 'Test Label');
   };
 
   return (
@@ -46,14 +33,23 @@ const HeroTop = () => {
         </p>
         <button
           className="hero-section__hire-btn"
-          onClick={handleEventChange("Clicked")}
+          onClick={handleEventChange("Hire Me")}
         >
-          G Analytics
+          Hire Me
           <span className="hero-section__hire-btn__icon">
             <AiOutlineArrowRight />
           </span>
         </button>
         <button
+          className="hero-section__hire-btn"
+          onClick={handleEventChange("Check CV")}
+        >
+          Check CV
+          <span className="hero-section__hire-btn__icon">
+            <AiOutlineArrowRight />
+          </span>
+        </button>
+        {/* <button
           className="hero-section__hire-btn"
           onClick={handleButtonClick}
         >
@@ -61,7 +57,7 @@ const HeroTop = () => {
           <span className="hero-section__hire-btn__icon">
             <AiOutlineArrowRight />
           </span>
-        </button>
+        </button> */}
       </div>
       <img className="hero-section__profile-img" src={profileImg} alt="" />
     </div>

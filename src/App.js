@@ -4,7 +4,7 @@ import RightBar from "./components/RightBar";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import GoogleAnalytics from "./utils.js/ganalytics";
-import Hotjar from "./utils.js/hotjar";
+// import Hotjar from "./utils.js/hotjar";
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
         </div>
         <Footer />
       </div>
-      <Hotjar/>
+      {/* <Hotjar/> */}
     </>
   );
 }
