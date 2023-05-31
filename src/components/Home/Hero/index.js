@@ -39,7 +39,7 @@ const HeroTop = () => {
         </p>
         <button
           className="hero-section__hire-btn"
-          onClick={handleButtonClick("Hire Me")}
+          onClick={handleButtonClick}
         >
           Hire Me
           <span className="hero-section__hire-btn__icon">
