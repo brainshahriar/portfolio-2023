@@ -6,12 +6,12 @@ import photographer from "../../../assets/images/photographer.png";
 export const serviceData = () => {
   return [
     {
-      title: "web development",
-      description: "blog, e-commerce",
+      title: "User Friendly UI/UX",
+      description: "Dynamic and attractive design",
       icon: codeIcon,
     },
     {
-      title: "uI/uX design",
+      title: "Frontend Development",
       description: "Mobile app, website design",
       icon: uiIcon,
     },

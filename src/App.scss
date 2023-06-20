@@ -9,6 +9,7 @@ p {
 }
 
 .body{
+    border: 1px solid red;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -18,6 +19,7 @@ p {
     background: #18191A;
     &__main{
         display: flex;  
+        border: 1px solid green;
     }
     &__left{
        width: 305px;
@@ -30,5 +32,6 @@ p {
     }
     &__right{
         width: 108px;
+        border: 1px solid red;
     }
 }

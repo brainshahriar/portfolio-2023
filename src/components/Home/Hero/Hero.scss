@@ -56,7 +56,10 @@
         margin-top: 19px;
     }
     &__hire-btn {
-        width: 154px;
+        // width: 154px;
+        padding-left: 10px;
+        padding-right: 10px;
+
         height: 51px;
         background: #ffb400;
         border-radius: 5px;
@@ -71,11 +74,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #18191a;
+        color: white;
         &__icon {
             font-size: 18px;
             margin-left: 11.67px;
-            color: #18191a;
+            color: white;
         }
     }
 }

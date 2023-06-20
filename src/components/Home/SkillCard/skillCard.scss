@@ -1,0 +1,91 @@
+@import "../../../assets/styles/index.scss";
+.skill-card {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #7e8083;
+    border-radius: 8px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    $card: &;
+    &:hover {
+        transform: scale(1.2);
+        transition: 1s ease-in-out;
+        background: #242526;
+        box-shadow: rgba(228, 206, 8, 0.719) 0px 1px 4px 0px;
+        #{$card}__description {
+            display: block;
+            
+        }
+        #{$card}__title {
+            display: none;
+        }
+        #{$card}__icon {
+            display: none;
+        }
+    }
+    &__description {
+        display: none;
+        font-family: $font-family-inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: capitalize;
+            color: white;
+            width: 80%;
+            text-overflow: ellipsis;
+            padding: 10px;
+            overflow-y: hidden;
+            opacity: 70%;
+            line-height: normal;
+            text-align: center;
+        
+    }
+    &__icon {
+        font-size: 70px;
+        color: #ffb400;
+    }
+    &__title {
+        font-family: $font-family-inter;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        // line-height: 123.6%;
+        text-transform: capitalize;
+        color: #fafafa;
+        margin-bottom: 15px;
+    }
+    // &__description {
+    //     font-family: $font-family-inter;
+    //     font-style: normal;
+    //     font-weight: 400;
+    //     font-size: 15px;
+    //     line-height: 24px;
+    //     text-align: center;
+    //     text-transform: capitalize;
+    //     font-feature-settings: "calt" off, "kern" off;
+    //     color: #767676;
+    //     width: 260px;
+    // }
+    &__button {
+        border: none;
+        background-color: transparent;
+        font-family: $font-family-roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14px;
+        color: #ffb400;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &__arrow {
+            font-size: 20px;
+        }
+    }
+}
