@@ -2,7 +2,7 @@ import React from "react";
 import "./about.scss";
 import { MdOutlineDone } from "react-icons/md";
 
-const index = () => {
+const About = () => {
     return (
         <div className="about-section">
             <p className="about-section__title">About Me</p>
@@ -32,4 +32,4 @@ const index = () => {
     );
 };
 
-export default index;
+export default About;

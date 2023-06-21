@@ -1,6 +1,8 @@
 import React from "react";
 import "./skillCard.scss";
-import { BiChevronRight } from "react-icons/bi";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import VisibilitySensor from "react-visibility-sensor";
 
 const SkillCard = ({ skill }) => {
     return (
@@ -8,7 +10,25 @@ const SkillCard = ({ skill }) => {
             <p className="skill-card__icon">{skill.icon}</p>
             <p className="skill-card__title">{skill.title}</p>
             <div className="skill-card__description">
-                <p>{skill.description}</p>
+                <VisibilitySensor>
+                    {({ isVisible }) => {
+                        const percentage = isVisible ? skill.percentage : 0;
+                        return (
+                            <CircularProgressbar
+                                value={percentage}
+                                text={`${percentage}%`}
+                                styles={buildStyles({
+                                    strokeLinecap: "round",
+                                    textSize: "20px",
+                                    pathColor: skill.storkColor,
+                                    textColor: "#ffb400",
+                                    trailColor: "#d6d6d6",
+                                    backgroundColor: "#3e98c7",
+                                })}
+                            />
+                        );
+                    }}
+                </VisibilitySensor>
             </div>
         </div>
     );

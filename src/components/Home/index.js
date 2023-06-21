@@ -5,15 +5,20 @@ import About from "./About";
 import Skills from "./Skills";
 import ServiceCard from "./ServiceCard";
 import { serviceData } from "./data/serviceData";
-import PriceCard from "./PriceCard";
-import { priceData, pricesData } from "./data/priceData";
+import PriceCard from "./ProjectCard";
+import { projectData } from "./data/projectData";
+import Resume from "./Resume";
+import Carousel from "./Carousel";
+import Contact from "./Contact";
+import ProjectCard from "./ProjectCard";
 
 const Home = () => {
     return (
         <div className="home-content">
             <HeroTop />
             <About />
-            <Skills/>
+            <Skills />
+            <Resume />
             <div className="home-content__section">
                 <p className="home-content__section__title">My Services</p>
                 <p className="home-content__section__sub-title">
@@ -28,17 +33,35 @@ const Home = () => {
                 </div>
             </div>
             <div className="home-content__section">
-                <p className="home-content__section__title">Price plans</p>
+                <p className="home-content__section__title">Projects</p>
                 <p className="home-content__section__sub-title">
                     Amet minim mollit non deserunt ullamco est sit aliqua dolor
                     do amet sint. Velit officia consequat duis enim velit
                     mollit. lorem ipsum
                 </p>
                 <div className="home-content__section__card-container">
-                    {pricesData().map((data, i) => (
-                        <PriceCard key={i} priceData={data} />
+                    {projectData().map((data, i) => (
+                        <ProjectCard key={i} projectData={data} />
                     ))}
                 </div>
+            </div>
+            <div className="home-content__section">
+                <p className="home-content__section__title">Gallery</p>
+                <p className="home-content__section__sub-title">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
+                    do amet sint. Velit officia consequat duis enim velit
+                    mollit. lorem ipsum
+                </p>
+                <div className="home-content__section__slider">
+                    <Carousel />
+                </div>
+            </div>
+            <div className="home-content__section">
+                <p className="home-content__section__title">Contact</p>
+                <p className="home-content__section__sub-title">
+                    Have a question or want to work together? Leave a message.
+                </p>
+                <Contact />
             </div>
         </div>
     );

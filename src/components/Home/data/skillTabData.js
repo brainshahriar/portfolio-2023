@@ -1,4 +1,4 @@
-import { DiReact} from "react-icons/di";
+import { DiReact } from "react-icons/di";
 export const skillOptions = () => {
     return [
         {
@@ -7,39 +7,39 @@ export const skillOptions = () => {
             data: [
                 {
                     title: "React",
-                    description:
-                        "lorem ipsum dolor sit amet, consectetur fficitur dfficit",
-                    icon: <DiReact/>,
+                    percentage: "66",
+                    icon: <DiReact />,
+                    storkColor:'#0000ff'
                 },
                 {
                     title: "React",
-                    description:
-                        "lorem ipsum dolor sit amet, consectetur fficitur dfficit",
-                    icon: <DiReact/>,
+                    percentage: "55",
+                    icon: <DiReact />,
+                    storkColor:'#0000ff'
                 },
                 {
                     title: "React",
-                    description:
-                        "lorem ipsum dolor sit amet, consectetur fficitur dfficit",
-                    icon: <DiReact/>,
+                    percentage: "80",
+                    icon: <DiReact />,
+                    storkColor:'#0000ff'
                 },
                 {
                     title: "React",
-                    description:
-                        "lorem ipsum dolor sit amet, consectetur fficitur dfficit",
-                    icon: <DiReact/>,
+                    percentage: "90",
+                    icon: <DiReact />,
+                    storkColor:'#0000ff'
                 },
                 {
                     title: "React",
-                    description:
-                        "lorem ipsum dolor sit amet, consectetur fficitur dfficit",
-                    icon: <DiReact/>,
+                    percentage: "40",
+                    icon: <DiReact />,
+                    storkColor:'#0000ff'
                 },
                 {
                     title: "React",
-                    description:
-                        "lorem ipsum dolor sit amet, consectetur fficitur dfficit",
-                    icon: <DiReact/>,
+                    percentage: "56",
+                    icon: <DiReact />,
+                    storkColor:'#0000ff'
                 },
             ],
         },

@@ -6,7 +6,6 @@ import ServiceCard from '../ServiceCard';
 import SkillCard from '../SkillCard';
 const Skills = () => {
     const [option,setOption]=useState(skillOptions()[0])
-    console.log(option,'kk');
     return (
         <div className="skill-section">
             <p className="skill-section__title">Skills</p>

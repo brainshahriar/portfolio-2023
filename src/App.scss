@@ -1,5 +1,10 @@
 @import '../src/assets/styles/index.scss';
 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 p {
     display: block;
     margin-block-start: 0em;
@@ -9,7 +14,6 @@ p {
 }
 
 .body{
-    border: 1px solid red;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -19,7 +23,7 @@ p {
     background: #18191A;
     &__main{
         display: flex;  
-        border: 1px solid green;
+        // border: 1px solid green;
     }
     &__left{
        width: 305px;
@@ -32,6 +36,25 @@ p {
     }
     &__right{
         width: 108px;
-        border: 1px solid red;
+        // border: 1px solid red;
+    }
+    
+}
+::-webkit-scrollbar {
+    width: 12px;
+    &-track {
+        background: #18191A;
+        border-radius: 4px;
+    }
+
+    &-thumb {
+        background: #f5d079b6 0% 0% no-repeat padding-box;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        opacity: 70%;
+
+        &:hover {
+            background: #ffb400 0% 0% no-repeat padding-box;
+        }
     }
 }

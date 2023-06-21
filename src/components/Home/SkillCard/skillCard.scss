@@ -29,20 +29,7 @@
     }
     &__description {
         display: none;
-        font-family: $font-family-inter;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 12px;
-            text-transform: capitalize;
-            color: white;
-            width: 80%;
-            text-overflow: ellipsis;
-            padding: 10px;
-            overflow-y: hidden;
-            opacity: 70%;
-            line-height: normal;
-            text-align: center;
-        
+        width: 50%;
     }
     &__icon {
         font-size: 70px;
