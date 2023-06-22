@@ -7,7 +7,7 @@ import VisibilitySensor from "react-visibility-sensor";
 const SkillCard = ({ skill }) => {
     return (
         <div className="skill-card">
-            <p className="skill-card__icon">{skill.icon}</p>
+            <p className="skill-card__icon" style={{color:`${skill.iconColor}`}}>{skill.icon}</p>
             <p className="skill-card__title">{skill.title}</p>
             <div className="skill-card__description">
                 <VisibilitySensor>
@@ -21,7 +21,7 @@ const SkillCard = ({ skill }) => {
                                     strokeLinecap: "round",
                                     textSize: "20px",
                                     pathColor: skill.storkColor,
-                                    textColor: "#ffb400",
+                                    textColor: skill.storkColor,
                                     trailColor: "#d6d6d6",
                                     backgroundColor: "#3e98c7",
                                 })}

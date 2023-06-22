@@ -8,7 +8,6 @@ const Skills = () => {
     const [option,setOption]=useState(skillOptions()[0])
     return (
         <div className="skill-section">
-            <p className="skill-section__title">Skills</p>
             <div className="skill-section__tab">
                  {
                     skillOptions().map((skill,i) =>

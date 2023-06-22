@@ -1,7 +1,7 @@
 export const languageData = () => {
     return [
-        { name: "Bangla", percentage: "100%" },
-        { name: "English", percentage: "100%" },
-        { name: "Spanish", percentage: "80%" },
+        { name: "Bangle", percentage: "100%", value: "Native" },
+        { name: "English", percentage: "80%", value: "Fluent"},
+        { name: "Hindi", percentage: "70%" ,value: "Speaking"},
     ];
 };

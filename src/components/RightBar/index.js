@@ -10,19 +10,6 @@ const RightBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="right-bar">
-      <div className="right-bar__moon-icon">
-        <GiMoon />
-      </div>
-      <div
-        className="right-bar__login-icon"
-        onClick={() => {
-          setIsOpen(true);
-        }}
-        title="login"
-      >
-        <BiLogIn />
-      </div>
-      <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="right-bar__link-div">
         {sidebarLinks().map((data, i) => (
           <div className="right-bar__link-item" key={i}>

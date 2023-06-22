@@ -4,7 +4,6 @@
   width: 100%;
   background-color: #242526;
   padding-bottom: 25px;
-
   &__profile-section {
     width: 305px;
     display: flex;
@@ -12,21 +11,22 @@
     flex-direction: column;
     height: fit-content;
     margin-bottom: 20px;
+    height: 235px;
   }
 
   &__profile-img {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    margin-top: 52px;
-    margin-bottom: 29px;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
 
   &__active-dot {
     width: 16px;
     height: 16px;
-    left: 205px;
-    top: 166px;
+    left: 185px;
+    top: 100px;
     position: absolute;
     border-radius: 50%;
     background: #7eb942;
@@ -34,7 +34,6 @@
   }
 
   &__name {
-    margin-bottom: 15px;
     font-family: $font-family-inter;
     font-style: normal;
     font-weight: 500;
@@ -192,6 +191,7 @@
     background: #ffb400;
     margin: 20px 45px 0px 40px;
     cursor: pointer;
+    text-decoration: none;
     &__text {
       font-family: $font-family-inter;
       font-style: normal;
@@ -199,10 +199,33 @@
       font-size: 14px;
       line-height: 17px;
       color: #ffffff;
-      margin-right: 20px;
+      margin-right: 10px;
     }
     &__icon {
       color: #ffffff;
+    }
+  }
+  &__scroll-div{
+      height: calc(100vh - 355px);
+      margin-top: 10px;
+      margin-bottom: 10px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 12px;
+        &-track {
+            background: #242526;
+        }
+    
+        &-thumb {
+            background: #f5d079b6 0% 0% no-repeat padding-box;
+            -webkit-border-radius: 30px;
+            border-radius: 30px;
+            opacity: 70%;
+    
+            &:hover {
+                background: #ffb400 0% 0% no-repeat padding-box;
+            }
+        }
     }
   }
 }

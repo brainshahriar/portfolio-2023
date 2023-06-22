@@ -31,19 +31,14 @@
         display: none;
         width: 50%;
     }
-    &__icon {
-        font-size: 70px;
-        color: #ffb400;
-    }
     &__title {
         font-family: $font-family-inter;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        // line-height: 123.6%;
         text-transform: capitalize;
         color: #fafafa;
-        margin-bottom: 15px;
+        margin-top: 10px;
     }
     // &__description {
     //     font-family: $font-family-inter;

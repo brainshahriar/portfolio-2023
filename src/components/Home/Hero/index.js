@@ -1,19 +1,21 @@
 import React from "react";
 import "./Hero.scss";
 import profileImg from "../../../assets/images/profile.png";
-import { AiOutlineArrowRight } from "react-icons/ai";
+import { BiDownload } from "react-icons/bi";
 import Typewriter from "typewriter-effect";
+import pdf from "../../../assets/pdf/jubayer_al_alam_resume.pdf";
+import { heroData } from "../data/heroData";
 
 const HeroTop = () => {
     return (
         <div className="hero-section">
             <div className="hero-section__profile-info">
                 <p className="hero-section__profile-title">
-                    I'm Al Shahriar <br />
+                    I'm {heroData().name}<br />
                     <span className="hero-section__profile-title--highlight">
                         <Typewriter
                             options={{
-                                strings: ["Front-end Developer"],
+                                strings: heroData().designations,
                                 autoStart: true,
                                 loop: true,
                             }}
@@ -21,16 +23,19 @@ const HeroTop = () => {
                     </span>
                 </p>
                 <p className="hero-section__profile-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                    volutpat feugiat placerat lobortis. Natoque rutrum semper
-                    sed suspendisse nunc lectus.
+                    {heroData().description}
                 </p>
-                <button className="hero-section__hire-btn">
+                <a
+                    className="hero-section__hire-btn"
+                    href={pdf}
+                    rel="noreferrer"
+                    target="_blank"
+                >
                     Download Resume
                     <span className="hero-section__hire-btn__icon">
-                        <AiOutlineArrowRight />
+                        <BiDownload size={22} />
                     </span>
-                </button>
+                </a>
             </div>
             <img
                 className="hero-section__profile-img"

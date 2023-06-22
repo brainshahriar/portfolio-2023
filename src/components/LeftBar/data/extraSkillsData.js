@@ -1,8 +1,8 @@
 export const extraSkillsData = () => {
     return [
-       "Bootstrap, Materialize",
-       "Stylus, Sass, Less",
-       "Gulp, Webpack, Grunt",
+       "Bootstrap, MaterialUI",
+       "Sass RTKQuery",
+       "ESLint, Webpack, JEST",
        "GIT Knowledge"
     ];
 };
