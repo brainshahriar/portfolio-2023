@@ -2,7 +2,7 @@
 .resume-section {
     width: fit-content;
     display: grid;
-    margin-top: 50px;
+    margin-top: 40px;
     height: fit-content;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.875rem;
@@ -46,6 +46,9 @@
         color: #fafafa;
         margin-left: 30px;
         margin-top: 10px;
+        &__item{
+            margin-bottom: 8px;
+        }
     }
     &__section {
         padding-left: 40px;

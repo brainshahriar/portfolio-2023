@@ -11,6 +11,10 @@ import Resume from "./Resume";
 import Carousel from "./Carousel";
 import Contact from "./Contact";
 import ProjectCard from "./ProjectCard";
+import { galleryData } from "./data/galleryData";
+import { contactData } from "./data/contactData";
+import { blogData } from "./data/blogData";
+import BlogCard from "./BlogCard";
 
 const Home = () => {
     return (
@@ -43,22 +47,29 @@ const Home = () => {
             <div className="home-content__section" id="portfolio">
                 <p className="home-content__section__title">Portfolio</p>
                 <p className="home-content__section__sub-title">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit. lorem ipsum
+                    {projectData().description}
                 </p>
                 <div className="home-content__section__card-container">
-                    {projectData().map((data, i) => (
+                    {projectData().items.map((data, i) => (
                         <ProjectCard key={i} projectData={data} />
+                    ))}
+                </div>
+            </div>
+            <div className="home-content__section" id="blog">
+                <p className="home-content__section__title">Blog</p>
+                <p className="home-content__section__sub-title">
+                    {blogData().description}
+                </p>
+                <div className="home-content__section__card-container">
+                    {blogData().items.map((data, i) => (
+                        <BlogCard key={i} blogData={data} />
                     ))}
                 </div>
             </div>
             <div className="home-content__section" id="gallery">
                 <p className="home-content__section__title">Gallery</p>
                 <p className="home-content__section__sub-title">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit. lorem ipsum
+                    {galleryData().description}
                 </p>
                 <div className="home-content__section__slider">
                     <Carousel />
@@ -67,7 +78,7 @@ const Home = () => {
             <div className="home-content__section" id="contact">
                 <p className="home-content__section__title">Contact</p>
                 <p className="home-content__section__sub-title">
-                    Have a question or want to work together? Leave a message.
+                    {contactData().description}
                 </p>
                 <Contact />
             </div>

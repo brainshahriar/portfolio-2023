@@ -17,7 +17,7 @@ const Resume = () => {
                     </p>
                     <ul className="resume-section__list">
                         {
-                            resumeSummaryData().items.map((data,i)=><li key={i}>{data}</li> )
+                            resumeSummaryData().items.map((data,i)=><li key={i} className="resume-section__list__item">{data}</li> )
                         }
                     </ul>
                 </div>
@@ -58,8 +58,8 @@ const Resume = () => {
                     </p>
                     <ul className="resume-section__list">
                         {skillOptions().map((skill) => (
-                            <li>
-                                {skill.title} :{" "}
+                            <li className="resume-section__list__item">
+                                <strong>{skill.title}: </strong>
                                 {skill.data.map((item, i) => (
                                     <span className="resume-section__skill-item">
                                         {item.title}

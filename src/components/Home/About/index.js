@@ -7,23 +7,25 @@ const About = () => {
     return (
         <div className="about-section">
             <p className="about-section__description">
-                    {aboutData().description}
+                {aboutData().description}
+            </p>
+            <div className="about-section__vertical-line"></div>
+            <div className="about-section__right">
+                <p className="about-section__title">
+                    {aboutData().designations}
                 </p>
-                <div className="about-section__vertical-line"></div>
-                <div className="about-section__right">
-                    <p className="about-section__title">
-                        {aboutData().designations}
-                    </p>
-                    <ul className="about-section__list">
-                        {
-                            aboutData().items.map((data,i)=><li className="about-section__item">
-                            {" "}
-                            <MdOutlineDone className="about-section__list-icon" />
-                            <strong>{data.label}:</strong> {data.value}
-                        </li>)
-                        }
+                <ul className="about-section__list">
+                        {aboutData()
+                            .items
+                            .map((data, i) => (
+                                <li className="about-section__item">
+                                    {" "}
+                                    <MdOutlineDone className="about-section__list-icon" />
+                                    <strong>{data.label}:</strong> {data.value}
+                                </li>
+                            ))}
                     </ul>
-                </div>
+            </div>
         </div>
     );
 };

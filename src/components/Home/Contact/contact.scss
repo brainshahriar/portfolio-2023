@@ -4,12 +4,19 @@
     gap: 30px;
     width: 100%;
     margin-top: 40px;
+    @include media-max(768px) {
+        flex-direction: column;
+        gap: 50px;
+    }
     &__left {
-        width: 40%;
+        width: 45%;
         background: #242526;
         box-shadow: rgba(228, 206, 8, 0.719) 0px 1px 4px 0px;
         border-radius: 5px;
         padding: 20px;
+        @include media-max(768px) {
+            width: 100%;
+        }
         &__item {
             font-family: $font-family-inter;
             font-style: normal;
@@ -20,6 +27,9 @@
             width: 100%;
             display: flex;
             align-items: center;
+            @include media-max(768px) {
+                font-size: 16px;
+            }
         }
         &__icon {
             height: 30px;
@@ -45,17 +55,26 @@
             opacity: 40%;
             margin-bottom: 20px;
         }
+        &__map{
+            height: 350px;
+            @include media-max(768px) {
+                height: 300px;
+            }
+        }
     }
     &__right {
-        width: 60%;
+        width: 55%;
         background: #242526;
         box-shadow: rgba(228, 206, 8, 0.719) 0px 1px 4px 0px;
         border-radius: 5px;
-        padding: 100px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+        @include media-max(768px) {
+            width: 100%;
+            padding: 40px;
+        }
         &__input {
             height: 40px;
             width: 100%;

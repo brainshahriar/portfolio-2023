@@ -1,8 +1,7 @@
 import React from "react";
-
 import Slider from "react-slick";
 import "./carousel.scss";
-import Images from "../data/images";
+import { galleryData } from "../data/galleryData";
 
 const Carousel = () => {
     const settings = {
@@ -17,15 +16,16 @@ const Carousel = () => {
 
     return (
         <>
-            <div className="content">
+            <div className="carousel">
                     <Slider {...settings}>
-                        {Images.map((item) => (
-                            <div key={item.id} className="image-div">
+                        {galleryData().items.map((item) => (
+                            <div key={item.id} className="carousel__image-div">
                                 <img
                                     src={item.src}
                                     alt={item.alt}
-                                    className="img"
+                                    className="carousel__image-div__img"
                                 />
+                                <p className="carousel__image-div__title">{item.title}</p>
                             </div>
                         ))}
                     </Slider>

@@ -37,12 +37,22 @@ const ProjectCard = ({ projectData }) => {
                     ))}
                 </div>
                 <div className={`project-card__button-div`}>
-                    <button className={`project-card__button`}>GitHub</button>
-                    <button
+                    <a
+                        className={`project-card__button`}
+                        href={projectData.gitLink}
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        GitHub
+                    </a>
+                    <a
                         className={`project-card__button project-card__button--active`}
+                        href={projectData.liveLink}
+                        rel="noreferrer"
+                        target="_blank"
                     >
                         Live
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>

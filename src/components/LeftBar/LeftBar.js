@@ -7,7 +7,6 @@ import { languageData } from "./data/languageData";
 import { skillsData } from "./data/skillsData";
 import { socialLinksData } from "./data/socialLinkData";
 import { extraSkillsData } from "./data/extraSkillsData";
-import pdf from "../../assets/pdf/jubayer_al_alam_resume.pdf";
 
 const LeftBar = () => {
     return (

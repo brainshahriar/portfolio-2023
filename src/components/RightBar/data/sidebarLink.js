@@ -10,7 +10,7 @@ export const sidebarLinks = () => {
         { icon: <FaUserGraduate />, name: "Resume", link: "#resume" },
         { icon: <BsFillFileEarmarkCodeFill />, name: "Services", link: "#service" },
         { icon: <FaBriefcase />, name: "Portfolio", link: "#portfolio" },
-        { icon: <RiQuillPenFill size={22} />, name: "Blog", link: "#" },
+        { icon: <RiQuillPenFill size={22} />, name: "Blog", link: "#blog" },
         { icon: <RiGalleryFill />, name: "Gallery", link: "#gallery" },
         { icon: <BsFillChatLeftFill />, name: "Contact", link: "#contact" },
     ];

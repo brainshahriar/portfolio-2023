@@ -73,7 +73,8 @@
   }
 
   &__line {
-    width: 220px;
+    width: 217px;
+    margin: 0 auto;
     height: 0px;
     border: 1.5px solid #3a3b3c;
   }
@@ -217,7 +218,7 @@
         }
     
         &-thumb {
-            background: #f5d079b6 0% 0% no-repeat padding-box;
+            background: #6c6d6e 0% 0% no-repeat padding-box;
             -webkit-border-radius: 30px;
             border-radius: 30px;
             opacity: 70%;

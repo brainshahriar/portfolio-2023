@@ -11,6 +11,7 @@
     width: 65.88px;
     height: 65.88px;
     margin-bottom: 33.44px;
+    object-fit: cover;
   }
   &__title {
     font-family: $font-family-inter;
@@ -21,6 +22,7 @@
     text-transform: capitalize;
     color: #fafafa;
     margin-bottom: 15px;
+    text-align: center;
   }
   &__description {
     font-family: $font-family-inter;
@@ -32,7 +34,12 @@
     text-transform: capitalize;
     font-feature-settings: "calt" off, "kern" off;
     color: #767676;
-    width: 260px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
   &__button {
     border: none;

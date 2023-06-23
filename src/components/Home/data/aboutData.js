@@ -20,7 +20,7 @@ export const aboutData = () => {
             },
             {
                 label: "Website",
-                value: "https://jubayer-portfolio.netlify.app/",
+                value: "https://jubayer-portfolio.netlify.app",
             },
             {
                 label: "Phone",

@@ -30,6 +30,9 @@
             color: #fafafa;
             text-align: center;
             cursor: pointer;
+            @include media-max(768px) {
+                font-size: 14px;
+            }
             &:hover{
                 color: #ffb400;
             }
@@ -41,10 +44,13 @@
     &__card-container{
         width: fit-content;
         display: grid;
-        margin-top: 50px;
+        margin-top: 40px;
         height: fit-content;
         grid-template-columns: repeat(5,1fr);
         gap: 1.875rem;
+        @include media-max(768px) {
+            grid-template-columns: repeat(4,1fr);
+        }
       }
 }
 
