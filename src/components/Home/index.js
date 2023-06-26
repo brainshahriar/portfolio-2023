@@ -1,11 +1,8 @@
 import React from "react";
-import "./home.scss";
 import HeroTop from "./Hero";
 import About from "./About";
-import Skills from "./Skills";
 import ServiceCard from "./ServiceCard";
 import { serviceData } from "./data/serviceData";
-import PriceCard from "./ProjectCard";
 import { projectData } from "./data/projectData";
 import Resume from "./Resume";
 import Carousel from "./Carousel";
@@ -15,6 +12,8 @@ import { galleryData } from "./data/galleryData";
 import { contactData } from "./data/contactData";
 import { blogData } from "./data/blogData";
 import BlogCard from "./BlogCard";
+import Skill from "./Skill";
+import "./home.scss";
 
 const Home = () => {
     return (
@@ -25,9 +24,9 @@ const Home = () => {
                 <p className="home-content__section__title">About Me</p>
                 <About />
             </div>
-            <div className="home-content__section" id="skills">
-                <p className="home-content__section__title">Skills</p>
-                <Skills />
+            <div className="home-content__section" id="skill">
+                <p className="home-content__section__title">Skill</p>
+                <Skill />
             </div>
             <div className="home-content__section" id="resume">
                 <p className="home-content__section__title">Resume</p>

@@ -7,6 +7,7 @@ import { languageData } from "./data/languageData";
 import { skillsData } from "./data/skillsData";
 import { socialLinksData } from "./data/socialLinkData";
 import { extraSkillsData } from "./data/extraSkillsData";
+import { generalData } from "./data/genarelLeftBarData";
 
 const LeftBar = () => {
     return (
@@ -20,46 +21,32 @@ const LeftBar = () => {
                     />
                     <div className="left-bar__active-dot"></div>
                 </div>
-                <p className="left-bar__name">Jubayer Al Alam</p>
-                <p className="left-bar__title">Software Engineer</p>
+                <p className="left-bar__name">{generalData().name}</p>
+                <p className="left-bar__title">{generalData().designation}</p>
                 <div className="left-bar__social">
                     {socialLinksData().map((data, i) => (
-                        <a href={data.link}>{data.icon}</a>
+                        <a href={data.link} key={i}>{data.icon}</a>
                     ))}
                 </div>
             </section>
             <hr className="left-bar__line" />
 
             <div className="left-bar__scroll-div">
-            <section className="left-bar__info-section">
-                <div className="left-bar__info-section__item">
-                    <p className="left-bar__info-section__label">Age:</p>
-                    <p className="left-bar__info-section__value">24</p>
-                </div>
-                <div className="left-bar__info-section__item">
-                    <p className="left-bar__info-section__label">Residence</p>
-                    <p className="left-bar__info-section__value">BD</p>
-                </div>
-                <div className="left-bar__info-section__item">
-                    <p className="left-bar__info-section__label">Freelance:</p>
-                    <p className="left-bar__info-section__value left-bar__info-section__value--green">
-                        Available
-                    </p>
-                </div>
-                <div className="left-bar__info-section__item">
-                    <p className="left-bar__info-section__label">Address:</p>
-                    <p className="left-bar__info-section__value">
-                        Dhaka,Bangladesh
-                    </p>
-                </div>
-            </section>
-            <hr className="left-bar__line" />
+                <section className="left-bar__info-section">
+                    {
+                        generalData().infos.map((info,i) =><div key={i} className="left-bar__info-section__item">
+                        <p className="left-bar__info-section__label">{info.label} :</p>
+                        <p className={`left-bar__info-section__value ${info.isGreen && 'left-bar__info-section__value--green'}`}>{info.value}</p>
+                    </div>)
+                    }
+                </section>
+                <hr className="left-bar__line left-bar__line--scroll" />
                 <section className="left-bar__progress-section">
                     <p className="left-bar__progress-section__title">
                         Languages
                     </p>
                     {languageData().map((data, i) => (
-                        <>
+                        < div key={i}>
                             {" "}
                             <div className="left-bar__progress">
                                 <p>{data.name}</p>
@@ -71,14 +58,14 @@ const LeftBar = () => {
                                     style={{ width: `${data.percentage}` }}
                                 ></div>
                             </div>
-                        </>
+                        </div>
                     ))}
                 </section>
-                <hr className="left-bar__line" />
+                <hr className="left-bar__line left-bar__line--scroll" />
                 <section className="left-bar__progress-section">
-                    <p className="left-bar__progress-section__title">Skils</p>
+                    <p className="left-bar__progress-section__title">Skill</p>
                     {skillsData().map((data, i) => (
-                        <>
+                        <div key={i}>
                             <div className="left-bar__progress">
                                 <p>{data.name}</p>
                                 <p>{data.value}</p>
@@ -89,13 +76,13 @@ const LeftBar = () => {
                                     style={{ width: `${data.percentage}` }}
                                 ></div>
                             </div>
-                        </>
+                        </div>
                     ))}
                 </section>
-                <hr className="left-bar__line" />
+                <hr className="left-bar__line left-bar__line--scroll" />
                 <section className="left-bar__extra-skill-section">
                     <p className="left-bar__extra-skill-section__title">
-                        Extra Skils
+                        Extra Skill
                     </p>
                     {extraSkillsData().map((data, i) => (
                         <div
@@ -109,12 +96,16 @@ const LeftBar = () => {
                         </div>
                     ))}
                 </section>
-                
             </div>
             <hr className="left-bar__line" />
-            <a class="left-bar__button" href={'https://github.com/Jubayer777'} rel="noreferrer" target="_blank">
-                <span class="left-bar__button__text">GitHub</span>
-                <AiFillGithub size={24} className="left-bar__button__icon" />
+            <a
+                className="left-bar__button"
+                href={generalData().gitLink}
+                rel="noreferrer"
+                target="_blank"
+            >
+                <span className="left-bar__button__text">GitHub</span>
+                <AiFillGithub  className="left-bar__button__icon" />
             </a>
         </div>
     );

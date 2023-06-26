@@ -18,7 +18,7 @@ const About = () => {
                         {aboutData()
                             .items
                             .map((data, i) => (
-                                <li className="about-section__item">
+                                <li className="about-section__item" key={i}>
                                     {" "}
                                     <MdOutlineDone className="about-section__list-icon" />
                                     <strong>{data.label}:</strong> {data.value}

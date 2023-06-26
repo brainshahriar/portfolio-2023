@@ -28,6 +28,7 @@ const Resume = () => {
                             i === educationData().length - 1 &&
                             "resume-section__section--last"
                         }`}
+                        key={i}
                     >
                         <p className="resume-section__sub-title">
                             {education.degree}
@@ -57,11 +58,11 @@ const Resume = () => {
                     {resumeSkillData().description}
                     </p>
                     <ul className="resume-section__list">
-                        {skillOptions().map((skill) => (
-                            <li className="resume-section__list__item">
+                        {skillOptions().map((skill,i) => (
+                            <li className="resume-section__list__item" key={i}>
                                 <strong>{skill.title}: </strong>
                                 {skill.data.map((item, i) => (
-                                    <span className="resume-section__skill-item">
+                                    <span className="resume-section__skill-item" key={i}>
                                         {item.title}
                                     </span>
                                 ))}
@@ -76,6 +77,7 @@ const Resume = () => {
                             i === experienceData().length - 1 &&
                             "resume-section__section--last"
                         }`}
+                        key={i}
                     >
                         <p className="resume-section__sub-title">
                             {experience.position}

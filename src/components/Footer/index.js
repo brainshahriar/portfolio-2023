@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <BiCopyright className='footer__icon'/>
-            <p className='footer__text'>{new Date().getFullYear()} All Right Reserved . <span className='footer__text--highlighter'>SHAHRIAR</span></p>
+            <p className='footer__text'>{new Date().getFullYear()} All Right Reserved . <span className='footer__text--highlighter'>Jubayer Al Alam</span></p>
         </div>
     );
 };

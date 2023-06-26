@@ -23,7 +23,7 @@ const ProjectCard = ({ projectData }) => {
             <div className="project-card__hover-content">
                 <div className="project-card__content">
                     {projectData.features.map((data, i) => (
-                        <div>
+                        <div key={i}>
                             <div className="project-card__content__item">
                                 <AiOutlineCheck className="project-card__content__icon" />
                                 <p className={`project-card__content__text`}>

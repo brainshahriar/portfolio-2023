@@ -1,15 +1,18 @@
 @import "../../../assets/styles/index.scss";
 .project-card {
-    height: 450px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #242526;
+    background: $sidebar-bg;
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     cursor: pointer;
+    @include media-max(375px) {
+        height: 350px;
+    }
     $card: &;
     &:hover {
         #{$card}__normal-content {
@@ -42,7 +45,7 @@
         font-size: 24px;
         line-height: 123.6%;
         text-transform: capitalize;
-        color: #ffb400;
+        color: $theme-bg;
         margin-bottom: 19px;
         margin-top: 30px;
         @include media-max(768px) {
@@ -56,9 +59,9 @@
         font-size: 14px;
         line-height: normal;
         text-transform: capitalize;
-        color: #dbac0f;
+        color: $color-off-orange;
         margin-bottom: 8px;
-        @include media-max(768px) {
+        @include media-max(375px) {
             font-size: 12px;
         }
     }
@@ -71,7 +74,7 @@
         text-align: center;
         text-transform: capitalize;
         font-feature-settings: "calt" off, "kern" off;
-        color: white;
+        color: $color-white;
         margin-left: 31px;
         margin-right: 31px;
         margin-bottom: 50px;
@@ -80,7 +83,7 @@
         display: -webkit-box;
         -webkit-line-clamp: 4;
         -webkit-box-orient: vertical;
-        @include media-max(768px) {
+        @include media-max(375px) {
             font-size: 12px;
         }
     }
@@ -98,24 +101,24 @@
         &__line {
             opacity: 45%;
             height: 0px;
-            border: 0.5px solid #fafafa;
+            border: 0.5px solid $text-white;
         }
         &__icon {
             width: 18px;
             height: 18px;
-            color: #ffb400;
+            color: $theme-bg;
         }
         &__text {
-            font-family: $font-family-inter;
+            font-family: $font-family-cormorant-garamond;
             font-style: normal;
             font-weight: 400;
             font-size: 15px;
             line-height: 24px;
             text-transform: capitalize;
             font-feature-settings: "calt" off, "kern" off;
-            color: #fafafa;
+            color: $text-white;
             margin-left: 18.63px;
-            @include media-max(768px) {
+            @include media-max(375px) {
                 font-size: 12px;
             }
         }
@@ -134,10 +137,10 @@
         font-size: 14px;
         line-height: 17px;
         text-transform: capitalize;
-        color: #1b1b1b;
+        color: $body-bg;
         cursor: pointer;
-        background: #ffffff;
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.15);
+        background: $color-white;
+        box-shadow: 0px 1px 10px $box-shadow-left-bar;
         border-radius: 30px;
         width: 40%;
         height: 38px;
@@ -146,7 +149,7 @@
         justify-content: center;
         text-decoration: none;
         &--active {
-            background: #ffb400;
+            background: $theme-bg;
         }
     }
 }
